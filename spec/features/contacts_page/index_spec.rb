@@ -12,7 +12,7 @@ feature 'view all contacts', %{
 
   scenario "creator views all contacts on index page" do
     visit contacts_path
-
+    save_and_open_page
     expect(page).to have_content("John Doe")
     expect(page).to have_content("test@gmail.com")
     expect(page).to have_content("Hello!")
