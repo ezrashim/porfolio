@@ -1,0 +1,8 @@
+%h1 Contacts
+%ul
+  - @contacts.each do |contact|
+    %li
+      %p #{contact.first_name} #{contact.last_name}
+      %p= contact.email
+      %p= contact.message
+      %p= contact.created_at.localtime.strftime("Written at %I:%M %p on %m/%d/%Y")
